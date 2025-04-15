@@ -1,5 +1,6 @@
 # Ejecutar el siguiente comando en el ámbito donde esta el script almacenado:
-# ./iniciar-proyecto-NodeJS-TypeScript.ps1 -pathCreacionArchivo "C:\Users\PC\Desktop\" -nombreProyecto "reserva"
+# ./iniciar-proyecto-NodeJS-TypeScript.ps1 -pathCreacionArchivo "C:\Users\PC\Desktop\" -nombreProyecto "prueba"
+# ./iniciar-proyecto-NodeJS-TypeScript.ps1 -pathCreacionArchivo "C:\Users\Agustin\Desktop\" -nombreProyecto "prueba"
 param (
     # [Parameter(Mandatory=$true)]
     # [string]$pathCreacionArchivo,
@@ -7,7 +8,8 @@ param (
     [string]$nombreProyecto
 )
 
-$pathCreacionArchivo = "C:\Users\PC\Desktop\"   # descomentar parametro si se considera necesario, esta hecho asi para ejecutarse mas rapido
+# $pathCreacionArchivo = "C:\Users\PC\Desktop\"   # descomentar parametro si se considera necesario, esta hecho asi para ejecutarse mas rapido
+$pathCreacionArchivo = "C:\Users\Agustin\Desktop\"
 Set-Location $pathCreacionArchivo   # crea el proyecto en el path determinado en la variable $pathCreacionArchivo, SI NO HAGO ESTO, siempre va a ser donde ejecute el script
 
 try {
@@ -42,8 +44,8 @@ try {
     if (-not (Test-Path "index.ts")) {
         Write-Host "Creando archivo 'index.ts'." -f Cyan
         $indexts=@"
-        console.log("Hello World!");
-        console.log("Proyecto generado por el script de Agustin Brocani.");
+console.log("Hello World!");
+console.log("Proyecto generado por el script de Agustin Brocani.");
 "@
         $indexts | Set-Content -Path "index.ts" -Force
     } else {
@@ -62,7 +64,7 @@ try {
     if (-not (Test-Path "package.json")) {
         Write-Host "Creando archivo 'package.json'." -f Cyan
         Start-Process -NoNewWindow -Wait -FilePath "cmd" -ArgumentList "/c", "npm", "init", "-y"
-        & npm pkg set main="dist/index.js" scripts.build="tsc" scripts.start="node dist/index.js" scripts.dev="ts-node src/index.ts"
+        & npm pkg set main="dist/index.js" scripts.build="tsc" scripts.start="node dist/index.js" scripts.dev="npm run build && npm run start"
     } else {
         Write-Host "El archivo 'package.json' ya existe." -f Yellow
     }
