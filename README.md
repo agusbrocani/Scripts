@@ -1,5 +1,6 @@
-# Scripts(previamente instalar PowerShell 7)
-
+# Scripts
+### 0️⃣.0️⃣ Instalar PowerShell 7
+### 0️⃣.1️⃣ Instalar NVM
 ### 1️⃣ Instalar `PnP.PowerShell`
 Ejecuta el siguiente comando en PowerShell para instalar el módulo **PnP.PowerShell** en el ámbito del usuario actual:
 
