@@ -57,12 +57,12 @@ export default config;
 
     Write-Host "Creando archivos..." -f Cyan
     foreach ($archivo in $archivos.Keys) {
-        $content = $archivos[$archivo]
-        $directory = Split-Path $archivo -Parent
-        if (!(Test-Path $directory)) {
-            New-Item -Path $directory -ItemType Directory -Force | Out-Null
+        $contenido = $archivos[$archivo]
+        $directorio = Split-Path $archivo -Parent
+        if (!(Test-Path $directorio)) {
+            New-Item -Path $directorio -ItemType Directory -Force | Out-Null
         }
-        Set-Content -Path $archivo -Value $content -Encoding UTF8
+        Set-Content -Path $archivo -Value $contenido -Encoding UTF8
         Write-Host "Archivo creado: $archivo" -f Green
     }
 
