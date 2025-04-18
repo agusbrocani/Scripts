@@ -51,6 +51,7 @@ console.log("Proyecto generado por el script de Agustin Brocani.");
 
     Start-Process -NoNewWindow -Wait -FilePath "cmd" -ArgumentList "/c", "nvm", "install", "lts"
     Start-Process -NoNewWindow -Wait -FilePath "cmd" -ArgumentList "/c", "nvm", "use", "lts"
+    Start-Process -NoNewWindow -Wait -FilePath "cmd" -ArgumentList "/c", "npm", "install", "-g", "npm@latest"
     Write-Host "Version de NodeJS instalada y seleccionada con NVM:" -f Magenta
     Start-Process -NoNewWindow -Wait -FilePath "cmd" -ArgumentList "/c", "nvm", "list"
     Write-Host "Version del Node Package Module(npm):" -f Magenta
@@ -59,7 +60,7 @@ console.log("Proyecto generado por el script de Agustin Brocani.");
     if (-not (Test-Path "package.json")) {
         Write-Host "Creando archivo 'package.json'." -f Cyan
         Start-Process -NoNewWindow -Wait -FilePath "cmd" -ArgumentList "/c", "npm", "init", "-y"
-        & npm pkg set main="dist/index.js" scripts.build="tsc" scripts.start="node dist/index.js" scripts.dev="npm run build && npm run start"
+        & npm pkg set main="dist/index.js" scripts.build="tsc" scripts.start="node dist/index.js" scripts.dev="npm run build && npm run start" scripts.test="jest"
     } else {
         Write-Host "El archivo 'package.json' ya existe." -f Yellow
     }
@@ -78,10 +79,16 @@ console.log("Proyecto generado por el script de Agustin Brocani.");
         "esModuleInterop": true,
         "strict": true,
         "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true
     },
     "include": [
         "src/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
     ]
 }
 '@
