@@ -66,7 +66,7 @@ Use el **pathProyecto** que corresponda, ese comando está a modo de ejemplo.
 
 5️⃣.4️⃣ Ejecute el siguiente comando en la consola del VS Code.
 ```npm
-    npm run dev
+    npm run test
 ```
 
 ✅ **Añadió Jest al proyecto con éxito**
