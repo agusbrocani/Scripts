@@ -69,21 +69,21 @@ console.log("Proyecto generado por el script de Agustin Brocani.");
     if (-not (Test-Path "tsconfig.json")) {
         Write-Host "Creando archivo 'tsconfig.json'." -f Cyan
         $tsconfig = @'
-        {
-          "compilerOptions": {
-            "target": "ES6",
-            "module": "commonjs",
-            "outDir": "./dist",
-            "rootDir": "./src",
-            "esModuleInterop": true,
-            "strict": true,
-            "skipLibCheck": true,
-            "forceConsistentCasingInFileNames": true
-          },
-          "include": [
-            "src/**/*.ts"
-          ]
-        }
+{
+    "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+    },
+    "include": [
+    "src/**/*.ts"
+    ]
+}
 '@
     
         $tsconfig | Set-Content -Path "tsconfig.json" -Force
