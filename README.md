@@ -1,34 +1,39 @@
-# Scripts
-### 0️⃣.0️⃣ Instalar PowerShell 7
-### 0️⃣.1️⃣ Instalar NVM
-### 1️⃣ Instalar `PnP.PowerShell`
-Ejecuta el siguiente comando en PowerShell para instalar el módulo **PnP.PowerShell** en el ámbito del usuario actual:
-
+# Levantar proyecto local en TypeScript usando TypeScript Compiler y Node.js LTS.
+## 📝 Requisitos previos
+### 1️⃣ Instalar VS Code
+[Descargar VS Code.](https://code.visualstudio.com/download)  
+### 2️⃣ Instalar NVM
+[Descargar NVM.](https://github.com/coreybutler/nvm-windows?tab=readme-ov-file)
+### 3️⃣ Instalar PowerShell 7
+[Descargar PowerShell 7.](https://learn.microsoft.com/es-es/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.5)  
+## ⚡ Ejecutar script
+### 4️⃣ Pasos a seguir 
+4️⃣.1️⃣ Abra la terminal de **PowerShell**.  
+4️⃣.2️⃣ Posicionesé en el directorio donde está el script (desde la terminar de **PowerShell**).
 ```powershell
-   Install-Module PnP.PowerShell -Scope CurrentUser
+#ejemplo
+cd "C:\User\PC\Desktop\"
 ```
+⚠️ **Tenga en cuenta:**  
+Use el **path** y el **nombre del proyecto** que corresponda, ese comando está a modo de ejemplo.  
 
-Cuando se te solicite, elige la opción [A] Sí a todo.
-✅ Verificar instalación
-Para confirmar que el módulo se ha instalado correctamente, ejecuta:
-
+4️⃣.3️⃣ Ejecute el script.
 ```powershell
-   Get-Module -ListAvailable -Name PnP.PowerShell
+#ejemplo
+./iniciar-proyecto-NodeJS-TypeScript.ps1 -pathCreacionArchivo "C:\User\PC\Desktop\" -nombreProyecto "prueba"
 ```
+⚠️ **Tenga en cuenta:**  
+Use el **path** y el **nombre del proyecto** que corresponda, ese comando está a modo de ejemplo.
 
-2️⃣ Instalar Microsoft.Online.SharePoint.PowerShell
-Ejecuta el siguiente comando para instalar la versión específica del módulo Microsoft.Online.SharePoint.
-
-```powershell
-   Install-Module -Name Microsoft.Online.SharePoint.PowerShell -RequiredVersion 16.0.24524.12000
+## 💻 Estructura del proyecto generado:
+```bash
+[NombreDelProyecto]
+├── dist\          # Archivos JavaScript compilados
+├── src\           # Archivos fuente en TypeScript
+│   └── index.ts   # Archivo principal con "Hello World"
+├── node_modules\  # Dependencias de Node.js
+├── package.json   # Configuracion de dependencias
+├── tsconfig.json  # Configuracion de TypeScript
 ```
-
-Cuando se te solicite, elige la opción [A] Sí a todo.
-
-✅ Verificar instalación
-
-Para comprobar que el módulo se instaló correctamente, ejecuta:
-
-```powershell
-   Get-Module -ListAvailable -Name Microsoft.Online.SharePoint.PowerShell
-```
+**Escrito por** [Agustín Brocani](https://www.linkedin.com/in/agusbrocani/)  
+📅 **2025**  

@@ -1,16 +1,11 @@
-# Ejecutar el siguiente comando en el ámbito donde esta el script almacenado:
-# ./iniciar-proyecto-NodeJS-TypeScript.ps1 -pathCreacionArchivo "C:\Users\PC\Desktop\" -nombreProyecto "prueba"
-# ./iniciar-proyecto-NodeJS-TypeScript.ps1 -pathCreacionArchivo "C:\Users\Agustin\Desktop\" -nombreProyecto "prueba"
 param (
-    # [Parameter(Mandatory=$true)]
-    # [string]$pathCreacionArchivo,
+    [Parameter(Mandatory=$true)]
+    [string]$pathCreacionArchivo,
     [Parameter(Mandatory=$true)]
     [string]$nombreProyecto
 )
 
-# $pathCreacionArchivo = "C:\Users\PC\Desktop\"   # descomentar parametro si se considera necesario, esta hecho asi para ejecutarse mas rapido
-$pathCreacionArchivo = "C:\Users\Agustin\Desktop\"
-Set-Location $pathCreacionArchivo   # crea el proyecto en el path determinado en la variable $pathCreacionArchivo, SI NO HAGO ESTO, siempre va a ser donde ejecute el script
+Set-Location $pathCreacionArchivo
 
 try {
     Write-Host "Inicio de la ejecucion del script." -f Cyan
