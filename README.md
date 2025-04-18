@@ -59,7 +59,7 @@ Use el **path** que corresponda, ese comando está a modo de ejemplo.
 5️⃣.3️⃣ Ejecute el script: pathProyecto debe ser en donde está el proyecto creado previamente.
 ```powershell
 #ejemplo
-./agregarJest.ps1 -pathProyecto "C:\Users\PC\Desktop\NombreDelProyecto"
+./agregarJest.ps1 -pathProyecto "C:\User\PC\Desktop\NombreDelProyecto"
 ```
 ⚠️ **Tenga en cuenta:**  
 Use el **pathProyecto** que corresponda, ese comando está a modo de ejemplo.
