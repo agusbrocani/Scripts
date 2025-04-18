@@ -15,7 +15,7 @@
 cd "C:\User\PC\Desktop\"
 ```
 ⚠️ **Tenga en cuenta:**  
-Use el **path** y el **nombre del proyecto** que corresponda, ese comando está a modo de ejemplo.  
+Use el **path** que corresponda, ese comando está a modo de ejemplo.  
 
 4️⃣.3️⃣ Ejecute el script.
 ```powershell
@@ -35,5 +35,5 @@ Use el **path** y el **nombre del proyecto** que corresponda, ese comando está 
 ├── package.json   # Configuracion de dependencias
 ├── tsconfig.json  # Configuracion de TypeScript
 ```
-**Escrito por** [Agustín Brocani](https://www.linkedin.com/in/agusbrocani/)  
+**Escrito por** [Agustín Brocani](https://www.linkedin.com/in/agusbrocani/).    
 📅 **2025**  
