@@ -21,7 +21,7 @@ cd "C:\User\PC\Desktop\"
 ⚠️ **Tenga en cuenta:**  
 Use el **path** que corresponda, ese comando está a modo de ejemplo.  
 
-4️⃣.3️⃣ Ejecute el script.
+4️⃣.3️⃣ Ejecute el script: pathCreacionArchivo debe ser en donde quiere crear el proyecto.
 ```powershell
 #ejemplo
 ./iniciar-proyecto-NodeJS-TypeScript.ps1 -pathCreacionArchivo "C:\User\PC\Desktop\" -nombreProyecto "prueba"
@@ -56,7 +56,7 @@ cd "C:\User\PC\Desktop\"
 ⚠️ **Tenga en cuenta:**  
 Use el **path** que corresponda, ese comando está a modo de ejemplo.  
 
-5️⃣.3️⃣ Ejecute el script.
+5️⃣.3️⃣ Ejecute el script: pathProyecto debe ser en donde está el proyecto creado previamente.
 ```powershell
 #ejemplo
 ./agregarJest.ps1 -pathProyecto "C:\Users\PC\Desktop\NombreDelProyecto"
@@ -78,7 +78,7 @@ Use el **pathProyecto** que corresponda, ese comando está a modo de ejemplo.
 ├── node_modules\       # Dependencias de Node.js
 ├── src\                # Archivos fuente en TypeScript
 │   ├── index.ts        # Archivo principal con "Hello World"
-│   └── suma.ts         # Archivo con funcion suma de prueba
+│   └── suma.ts         # Archivo con función suma de prueba
 ├── test\               # Archivos de testing
 │   └── suma.test.ts    # Pruebas unitarias para el modulo 'suma.ts' usando Jest
 ├── jest.config.ts      # Configuracion de Jest para testing en TypeScript
