@@ -29,7 +29,7 @@ try {
 
 $archivos = @{
     "$pathProyecto\src\suma.ts" = @"
-export const suma = (a: number, b: number) => a + b;
+export const suma = (a: number, b: number): number => a + b;
 "@
 
     "$pathProyecto\test\suma.test.ts" = @"
